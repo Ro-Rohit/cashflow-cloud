@@ -134,11 +134,9 @@ export const invoiceTable = pgTable('invoice', {
   total: integer('total').notNull(),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
   updatedAt: timestamp('updated_at', { mode: 'date' }),
-  subscriptionId: text('subscription_id')
-    .references(() => subscriptionsTable.lemonSqueezyId, {
-      onDelete: 'set null',
-    })
-    .notNull(),
+  subscriptionId: text('subscription_id').references(() => subscriptionsTable.lemonSqueezyId, {
+    onDelete: 'set null',
+  }),
 });
 
 export const invoiceRelations = relations(invoiceTable, ({ one }) => ({

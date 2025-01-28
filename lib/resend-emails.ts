@@ -20,7 +20,7 @@ export const generateEmailTemplate = (username: string, verificationCode: string
 
       <p>We received a request to permanently delete your account. To confirm this action, please use the verification code below:</p>
 
-      <div style="background-color: #f9f9f9; padding: 15px; text-align: center; font-size: 30px; font-weight: bold; letter-spacing: 2px; border-radius: 4px; border: 1px solid #ddd; text-transform: uppercase;">
+      <div style="background-color: #f9f9f9; padding: 15px; text-align: center; font-size: 30px; font-weight: bold; letter-spacing: 2px; border-radius: 4px; border: 1px solid #ddd;">
         ${verificationCode}
       </div>
 

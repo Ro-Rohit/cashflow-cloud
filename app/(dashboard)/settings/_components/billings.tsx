@@ -104,11 +104,9 @@ const Billings = () => {
   return (
     <>
       <ConfirmationDialog />
-      <section className="w-full mb-20">
-        <h3 className="text-xl font-semibold text-black dark:text-white">Plans and billing</h3>
-        <p className="text-slate-700 text-sm font-normal mt-3 dark:text-white mb-4">
-          Manage your plan
-        </p>
+      <section className="w-full mb-20 text-center sm:text-left">
+        <h3 className="text-xl font-semibold text-black mb-2 dark:text-white">Plans and billing</h3>
+        <p className="text-slate-700 text-sm font-normal  dark:text-white mb-4">Manage your plan</p>
 
         {subscriptionLoading ? (
           <Skeleton className="w-full mb-10 h-[100px]" />
@@ -129,7 +127,7 @@ const Billings = () => {
                   <CardTitle className="font-semibold text-3xl mb-2 text-black dark:text-white">
                     {plan.variant.price}
                   </CardTitle>
-                  <CardDescription className="text-sm text-slate-700 dark:text-white">
+                  <CardDescription className="text-sm text-center sm:text-left text-slate-700 dark:text-white">
                     {plan.variant.name}
                   </CardDescription>
                 </CardHeader>
@@ -145,10 +143,10 @@ const Billings = () => {
                     ))}
                   </div>
                   <div className="my-4">
-                    <h5 className="text-md text-black font-medium mb-2 dark:text-white">
+                    <h5 className="text-md text-center sm:text-left text-black font-medium mb-2 dark:text-white">
                       Best Offer
                     </h5>
-                    <div className="flex flex-row flex-wrap items-center gap-2">
+                    <div className="flex flex-row flex-wrap items-center justify-center sm:justify-start gap-2">
                       {discountsData?.map((discount, idx) => (
                         <Badge
                           className=" cursor-pointer"
@@ -195,10 +193,10 @@ const Billings = () => {
 
         {discountsData && (
           <div className="w-full my-10">
-            <h3 className="text-2xl font-semibold text-black dark:text-white">
+            <h3 className="text-2xl text-center sm:text-left font-semibold text-black dark:text-white">
               Big Savings Await You! 🛍️
             </h3>
-            <p className="text-slate-700 text-sm mb-8 font-normal mt-3 dark:text-white">
+            <p className="text-slate-700 text-center sm:text-left  text-sm mb-8 font-normal mt-3 dark:text-white">
               Save now, thank yourself later!
             </p>
             <div className="grid w-full   grid-cols-1 md:grid-cols-2 gap-4">

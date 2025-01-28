@@ -94,8 +94,8 @@ const CategoriesBudgetChart = () => {
     <Card className="border border-primary drop-shadow-sm">
       <CardHeader>
         <div className="flex flex-col sm:flex-row items-center  justify-between gap-y-2 sm:gap-y-0">
-          <div className="flex flex-row justify-between items-center w-full sm:max-w-[300px] gap-x-2">
-            <CardTitle className="min-w-fit">Budget Analysis</CardTitle>
+          <div className="flex flex-col justify-center  sm:flex-row sm:justify-between items-center w-full sm:max-w-[300px] gap-y-2">
+            <CardTitle className="text-lg text-center sm:text-left">Budget Analysis</CardTitle>
             <ChartFilter defaultValue={chartType} value={chartType} onFilter={onTypeChange} />
           </div>
           <CategoryFilter

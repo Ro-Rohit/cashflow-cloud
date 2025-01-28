@@ -118,7 +118,7 @@ const Page = () => {
 
   if (billsQuery.isLoading) {
     return (
-      <Card className="border border-primary max-w-screen-xl mx-5  lg:mx-auto shadow-md p-4 mb-10 mt-[120px]  sm:mt-[-140px]">
+      <Card className="border border-primary max-w-screen-xl mx-5  lg:mx-auto shadow-md p-4 mt-[-140px]">
         <CardHeader className="w-full">
           <Skeleton className="h-12 w-48" />
           <Skeleton className="h-8 w-96" />
@@ -136,7 +136,7 @@ const Page = () => {
   return (
     <>
       <ConfirmDialog />
-      <Card className="border border-primary max-w-screen-xl mx-5 lg:mx-auto shadow-md p-4 mb-10 mt-[120px]  sm:mt-[-140px]">
+      <Card className="border border-primary max-w-screen-xl mx-5 lg:mx-auto shadow-md p-4 mb-10 mt-[-140px]">
         <CardHeader className="flex flex-col sm:flex-row gap-y-1 items-center justify-between">
           <CardTitle className="text-2xl text-center sm:text-left font-semibold">
             Bills page

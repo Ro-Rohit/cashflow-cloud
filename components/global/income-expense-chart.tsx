@@ -100,9 +100,9 @@ const IncomeExpenseChart = () => {
   return (
     <Card className="border border-primary drop-shadow-sm">
       <CardHeader className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-y-2 sm:gap-y-0">
-        <div className="flex justify-between lg:gap-x-6 items-center w-full lg:max-w-[300px]">
-          <CardTitle className="text-lg">Transactions</CardTitle>
-          <div className="flex flex-row gap-x-2">
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-y-2 sm:gap-y-0 lg:gap-x-6  w-full lg:max-w-[300px]">
+          <CardTitle className="text-lg text-center sm:text-left">Transactions</CardTitle>
+          <div className="flex flex-row gap-x-3 items-center justify-center sm:justify-start">
             <ZoomFilter
               value={dateTruncFilter}
               chartZoomLevel={activeData?.chartZoomLevel}
@@ -159,8 +159,6 @@ const ChartSkeleton = ({ isLoading, isError }: any) => {
 };
 
 export default IncomeExpenseChart;
-
-//   const { plan, setOpen: setPlanModalOpen } = useSubscriptionStore();
 
 //   const query = useSearchParams();
 //   const defaultTo = new Date();

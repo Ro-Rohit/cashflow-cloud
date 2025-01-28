@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 const TopNavigation: NextPage = () => {
   return (
-    <header className="fixed top-0 w-full  backdrop-blur-sm border-b-2 shadow-sm z-10 py-4">
+    <header className="fixed top-0 w-full  backdrop-blur-sm border-b-2 shadow-sm z-[999999999] py-4">
       <div className="flex items-center w-full justify-between px-2.5 md:px-0 container mx-auto">
         <div className="flex items-center gap-x-2">
           <Image src={'/logo-white.svg'} height={25} width={25} alt="cashflow cloud logo" />
@@ -32,7 +32,7 @@ const TopNavigation: NextPage = () => {
           </Link>
         </ul>
 
-        <div className="flex items-center gap-x-2">
+        <div className="sm:flex hidden items-center gap-x-2">
           <Link href={'/overview'}>
             <Button
               className=" rounded-full !bg-white !hover:bg-white/70 transition !text-black"

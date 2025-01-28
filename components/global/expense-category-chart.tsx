@@ -92,9 +92,9 @@ const ExpenseCategoryChart = () => {
   return (
     <Card className="border border-primary drop-shadow-sm">
       <CardHeader>
-        <div className="flex flex-row items-center justify-between gap-y-2 mb-4 ">
-          <CardTitle className="text-lg">Expense Categories</CardTitle>
-          <div className="flex items-center flex-row gap-x-2">
+        <div className="flex flex-col justify-center sm:flex-row items-center sm:justify-between gap-y-2 mb-4">
+          <CardTitle className="text-lg text-center sm:text-left">Expense Categories</CardTitle>
+          <div className="flex items-center flex-row gap-x-3">
             <TopFilter onFilter={setRank} defaultValue={rank} />
             <Select defaultValue={chartType} value={chartType} onValueChange={onTypeChange}>
               <SelectTrigger className="sm:w-auto h-9 rounded-md px-3">

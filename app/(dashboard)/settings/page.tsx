@@ -8,7 +8,7 @@ import Invoice from './_components/invoice';
 
 const Page = () => {
   return (
-    <Card className="border border-primary max-w-screen-xl mx-5 lg:mx-auto shadow-md p-4 mb-10 mt-[120px] sm:mt-[-140px]">
+    <Card className="border border-primary max-w-screen-xl mx-5 lg:mx-auto shadow-md p-4 mt-[-140px]">
       <CardHeader className="flex flex-col sm:flex-row gap-y-1 items-center justify-between">
         <CardTitle className="text-2xl font-semibold">Settings page</CardTitle>
       </CardHeader>

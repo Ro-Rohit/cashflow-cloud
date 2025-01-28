@@ -1,0 +1,1 @@
+ALTER TABLE "invoice" ALTER COLUMN "subscription_id" DROP NOT NULL;

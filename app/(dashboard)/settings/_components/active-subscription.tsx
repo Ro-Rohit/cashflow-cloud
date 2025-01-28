@@ -64,11 +64,13 @@ const ActiveSubscription: NextPage<Props> = ({ data, handleShowPlan, disabled, s
     }
   };
 
-  const isPlanPaused = data.isPaused && !!data.pausedAt;
+  const isPlanPaused = data.isPaused;
   const planPausedOrResume = isPlanPaused ? 'Resume' : 'Pause';
   const isPlanActive = data.status === 'active' || data.status === 'on_trial';
   const isPlanTechnicallyActive =
-    (data.status === 'cancelled' && data.endsAt <= new Date()) || isPlanActive;
+    (data.status === 'cancelled' && data.endsAt <= new Date()) ||
+    isPlanActive ||
+    data.status === 'paused';
 
   const [CancelDialog, handleConfirmCancel] = useConfirm({
     title: 'Cancel Subscription',

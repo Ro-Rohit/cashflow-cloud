@@ -15,6 +15,13 @@
       "when": 1738043984045,
       "tag": "0001_silky_layla_miller",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1738058666981,
+      "tag": "0002_steady_warpath",
+      "breakpoints": true
     }
   ]
 }

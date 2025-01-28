@@ -107,7 +107,6 @@ export const createConsent = async (token: string, phone: string) => {
     },
   };
 
-  console.log(options);
   const res = await axios.request(options);
   if (res.data) return res;
 };

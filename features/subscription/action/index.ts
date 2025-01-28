@@ -2,8 +2,6 @@
 import { useMutation, useQuery, QueryClient } from '@tanstack/react-query';
 import { honoClient } from '@/lib/utils';
 import { InferResponseType, InferRequestType } from 'hono';
-import { useUser } from '@clerk/nextjs';
-import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
 export const useGetDiscounts = () => {
@@ -51,7 +49,7 @@ export const useGetSubscriptionInvoice = () => {
 
 export const useGetActiveSubscriptionById = (subscriptionId?: string) => {
   const query = useQuery({
-    queryKey: ['active-subscription'],
+    queryKey: ['active-subscription', { subscriptionId }],
     enabled: !!subscriptionId,
     queryFn: async () => {
       if (!subscriptionId) {
@@ -143,7 +141,8 @@ export const useCancelActiveSubscription = () => {
     },
     onSuccess: (data) => {
       toast.success('subscription cancelled successfully.');
-      queryClient.invalidateQueries({ queryKey: ['active-subscription'] });
+      const subscriptionId = data.lemonSqueezyId;
+      queryClient.invalidateQueries({ queryKey: ['active-subscription', { subscriptionId }] });
     },
     onError: (error) => {
       toast.error('Failed to cancel subscription');
@@ -175,9 +174,9 @@ export const useUpdateActiveSubscription = () => {
       return data;
     },
     onSuccess: (data) => {
-      queryClient.invalidateQueries({ queryKey: ['active-subscription'] });
+      const subscriptionId = data.lemonSqueezyId;
+      queryClient.invalidateQueries({ queryKey: ['active-subscription', { subscriptionId }] });
     },
-    onError: (error) => {},
   });
 
   return query;

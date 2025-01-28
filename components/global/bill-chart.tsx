@@ -31,8 +31,8 @@ const BillChart = () => {
   return (
     <Card className="border border-primary drop-shadow-sm">
       <CardHeader>
-        <div className="flex flex-row items-center justify-between gap-x-3">
-          <CardTitle className="min-w-fit">Bills Analysis</CardTitle>
+        <div className="flex flex-row items-center justify-between gap-y-3">
+          <CardTitle className="text-lg ">Bills Analysis</CardTitle>
           <YearFilter
             onFilter={onYearFilterChange}
             yearArray={yearArray}

@@ -10,7 +10,7 @@ const ConnectBank = () => {
   };
 
   return (
-    <section className="flex flex-col md:flex-row justify-center md:justify-between items-center">
+    <section className="flex flex-col gap-y-4 md:flex-row justify-center md:justify-between items-center">
       <div className="gap-x-20 flex flex-col md:flex-row justify-center text-center md:text-left  items-center md:justify-between w-fit">
         <h6 className=" font-bold text-xl  text-black dark:text-white">Bank account</h6>
         <p className="text-slate-700 text-sm dark:text-white">No bank account connected</p>
