@@ -1,7 +1,21 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {},
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  devIndicators: {},
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'aceternity.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

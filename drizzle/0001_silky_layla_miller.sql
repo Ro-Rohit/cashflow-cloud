@@ -1,0 +1,2 @@
+ALTER TABLE "accounts" ADD COLUMN "last_fetch_date" timestamp;--> statement-breakpoint
+ALTER TABLE "accounts" ADD CONSTRAINT "accounts_user_id_users_user_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("user_id") ON DELETE cascade ON UPDATE no action;
